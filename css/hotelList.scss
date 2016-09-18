@@ -1,0 +1,92 @@
+@import 'public.scss';
+.hotel{
+	@include full;
+	padding-top:90px;
+	padding-bottom:36px;
+}
+.hotel-list{
+	width:100%;
+	top:90px;
+}
+.hotel-item{
+	width:100%;
+	padding:11px;
+	height:100px;
+	overflow:hidden;
+	border-bottom:$bb;
+	@include flex;
+	.hotel-img{
+		width:78px;
+		height:78px;
+		img{
+			width:78px;
+			height:78px;
+		}
+	}
+	.hotel-info{
+		@include flexTo(1);
+		width:0;
+		height:78px;
+		margin-left:10px;
+		p{
+			padding-bottom:2px;
+		}
+		span,.address{
+			font-size:12px;
+			color:$two-color;
+		}
+		.score,.price{
+			color:$orange-color;
+		}
+		.score{
+			margin-right:10px;
+		}
+		.gifts{
+			em{
+				padding:1px 3px; 
+				margin-right:5px;
+				border-radius:2px;
+				color:#fff;
+				transform:scale(.8,.8);
+				-webkit-transform:scale(.8,.8);
+				background:$orange-color;
+				&:nth-child(2){
+					background:#cc0000;
+
+				}
+				&:nth-child(3){
+					background:#15ABE6;
+				}
+			}
+		}
+		.price{
+			float:right;
+			color:$two-color;
+			em{
+				font-size:18px;
+				margin-right:3px;
+				color:$orange-color;
+			}
+		}
+		.title{
+			font-size:14px;
+		}
+		.range{
+			float:right;
+		}
+	}
+}
+.hotel-footer{
+	.checked{
+		&:after{
+			left:3px;
+			top:-1px;
+		}
+	}
+}
+.hotelList-date{
+	@include pos(fixed);
+	z-index:99;
+	top:3.125rem;
+	left:0;
+}

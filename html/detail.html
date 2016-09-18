@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--声明文档使用的字符编码-->
+    <meta charset="UTF-8">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <!--设置视口的宽度=设备的宽度；初始化比例：1:1；最大，最小比例为：1:1；禁止用户缩放或放大-->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!--禁止自动识别电话号码-->
+    <meta name='format-detection' content='telephone=no'>
+    <!--禁止自动识别邮箱-->
+    <meta name='format-detection' content='email=no'>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body> 
+    <div class="container" id='detail'>
+        <header class="header">
+            <span class="back"></span>
+            <h2 class="title">酒店详情</h2>
+        </header>
+        <div class="detail-hotel-img">
+            <img src="../img/banner1.jpg" alt="" class="img">
+            <span class="look-more">查看图集</span>
+        </div>
+        <div class="detail-tab tab">
+            <div class="detail-tab-title">
+                <span class='on tab-title'>基本信息</span><span class='tab-title'>酒店介绍</span>
+            </div>  
+            <div class="detail-tab-item-wrap tab-item-wrap">
+            </div>
+        </div>
+        <div class="page-date detail-date">
+            <section>入住<span id='in-date'></span></section>
+            <section>离店<span id='out-date'></span></section>
+        </div>
+        <div class="room-type-show">
+            <div class="room-type-wrap">
+                <section class="room-type">
+                    <div class='room-charactor'><p>标准大床房</p><p><span>大床</span><span>无早</span></p></div>
+                    <div class='room-price'>￥320</div>
+                    <div class='room-btn'>预订</div>
+                </section>
+                <section class="room-type">
+                    <div class='room-charactor'><p>标准大床房</p><p><span>大床</span><span>无早</span></p></div>
+                    <div class='room-price'>￥320</div>
+                    <div class='room-btn'>预订</div>
+                </section>
+                <section class="room-type">
+                    <div class='room-charactor'><p>标准大床房</p><p><span>大床</span><span>无早</span></p></div>
+                    <div class='room-price'>￥320</div>
+                    <div class='room-btn'>预订</div>
+                </section>
+            </div>         
+        </div>
+        <div class="more down">展开剩余全部</div>      
+    </div>
+    <section class="page hide-left" id='calendar'>
+        <header class='header'>
+            <a class='back' href="javascript:;" ></a>
+            <h2 class='title'>343间酒店</h2>
+            <a class='over' href="javascript:;" >完成</a>
+        </header>
+        <div class="calendar">
+            
+        </div>
+    </section>
+    <div class='room'>       
+        
+    </div>
+</body>
+</html>
+<script src='../js/zepto.min.js'></script>
+<script src='../component/iscroll5.js'></script>
+<script src='../component/calendar.js'></script>
+<script src='../component/plugins.js'></script>
+<script src='../component/dialog.js'></script>
+<script src='../js/detail.js'></script>

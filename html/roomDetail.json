@@ -1,0 +1,16 @@
+{
+  "error":"0",
+  "msg":"服务器返回正常",
+  "result":{
+    "id":1,
+    "price": 190,
+    "img":"../img/01.jpg",
+    "roomType":"标准大床房",
+    "area":"30",
+    "count": 2,
+    "bedType":"单人床1.2米,2张",
+    "wifi":"免费宽带",
+    "breakfast":"早餐",
+    "guarantee":1
+  }
+}

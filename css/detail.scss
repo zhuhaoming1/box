@@ -1,0 +1,238 @@
+@import 'public.scss';
+#detail{
+	padding-top:3.125rem;
+	background:#f5f6f5;
+	overflow-y:scroll;
+}
+/*---------------------------detail-date-style----------------------------------*/
+.detail-date{
+	position:static;
+	background:#fff;
+	border-top:$bb;
+	border-bottom-color:#eee;
+}
+/*---------------------------detail-hotel-img-style-----------------------------*/
+.detail-hotel-img{
+	width:100%;
+	height:9.4375rem;
+	overflow:hidden;
+	@include pos(relative);
+	img{
+		width:100%;
+		height:100%;
+	}
+	.look-more{
+		@include pos;
+		right:0;
+		bottom:20px;
+		background:#000;
+		color:#fff;
+		padding:5px 10px;
+		font-size:14px;
+	}
+}
+
+/*---------------------------detail-tab-style----------------------------------*/
+.detail-tab{
+	width:100%;
+	height:auto;
+	background:#fff;
+	padding-top:15px;
+	margin-bottom:15px;
+}
+.detail-tab-title{
+	margin:0 15px;
+	height:32px;
+	border:1px solid $high-color;
+	border-radius:8px;
+	overflow:hidden;
+	span{
+		float:left;
+		width:50%;
+		text-align:center;
+		line-height:32px;
+		font-size:13px;
+		color:$high-color;
+		border-right:1px solid $high-color;
+		&:last-child{
+			border:none;
+		}
+		&.on{
+			color:#fff;
+			background:$high-color;
+		}
+	}
+}
+.detail-tab-item-wrap{
+	width:200%;
+	height:190px;
+	border-bottom:$bb;
+	h3,p{
+		border-bottom:$bb;
+	}
+	h3{
+		font-size:16px;
+		color:#000;
+		line-height:50px;
+		padding-left:5px;
+	}
+	p{
+		line-height:40px;
+		color:#666;
+		font-size:14px;
+		padding-left:28px;
+	}
+	p:nth-of-type(1){
+		background:url(../img/icon_collect.png) 5px center no-repeat;
+		background-size:18px 20px;
+	}
+	p:nth-of-type(2){
+		background:url(../img/icon_phone.png) 5px center no-repeat;
+		background-size:18px 20px;
+	}
+	p:last-child{
+		border-bottom:none;
+		line-height:60px;
+		@include ellipsis;
+		background:url(../img/icon_address.png) 5px center no-repeat;
+		background-size:18px 20px;
+	}
+}
+.detail-tab-item{
+	width:50%;
+	height:180px;
+	padding:0 15px;
+	overflow:hidden;
+	float:left;
+	.article{
+		height:100%;
+	}
+	article{
+		font-size: 14px;
+	  	color: #333;
+	  	text-indent: 28px;
+	  	line-height: 1.5;
+	  	padding: 8px 0;
+	}	
+}
+.room-type-show{
+	width:100%;
+	height:210px;
+	overflow:hidden;
+}
+.room-type-wrap{
+	height:auto;
+	background:#fff;
+	border-bottom:$bb;	
+}
+.room-type{
+	width:100%;
+	height:70px;
+	border-bottom:$bb;
+	@include flex;
+	@include flexContent;
+	&:last-child{
+		border-bottom:none;
+	}
+	div{
+		@include flexTo(1)
+	}
+	.room-charactor{
+		@include flexTo(2);
+		@include flex(column);
+		@include flexContent($v:start);
+		padding-left:20px;
+		span{
+			font-size:12px;
+			color:#666;
+			margin:3px 5px 0 0;
+		}
+	}
+	.room-price{
+		color:$orange-color;
+		text-align:end;
+		margin-right:35px;
+	}
+	
+}
+.more{
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	font-size:14px;
+	color:#666;
+	background:#fff;
+}
+/*---------------------------room-style-------------------------------*/
+.room{
+	width:100%;
+	height:400px;
+	overflow:hidden;
+	background:#fff;
+	@include pos(fixed);
+	bottom:0;
+	z-index:9999999999;
+	transform:translate3d(0,100%,0);
+	transition:transform .5s;
+	.close{
+		@include pos;
+		right:12px;
+		top:-3px;
+		font-size:24px;
+	}
+	dl{
+		height:94px;
+		padding:12px;
+		@include flex;
+		dt,img{
+			width:70px;
+			height:70px;
+		}
+		dd{
+			@include flexTo(1);
+			margin-left:12px;
+		}
+		.title{
+			font-size:17px;
+		}
+		.price{
+			color:orange;
+			padding:2px 0;
+		}
+	}
+	dl~p{
+		height:50px;
+		border-top:$bb;
+		line-height:50px;
+		text-indent:38px;
+		@include pos(relative);
+		&:before{
+			content:'';
+			@include pos;
+			left:18px;
+			top:50%;
+			margin-top:-4px;
+			width:10px;
+			height:10px;
+			border-radius:50%;
+			background:#ddd;
+		}
+		span{
+			float:right;
+			margin-right:12px;
+			color:#000;
+		}
+		color:#666;
+	}
+	.book-btn{
+		clear:both;
+		width:100%;
+		line-height:55px;
+		height:55px;
+		background:$high-color;
+		text-align:center;
+		color:#fff;
+		letter-spacing:1px;
+		font-size:16px;
+	}
+}

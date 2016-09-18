@@ -1,0 +1,149 @@
+@import "public.scss";
+#book{
+	padding:3.125rem 0;
+	background:#f5f6f5;
+	overflow-y:scroll;
+}
+dl{
+	height:94px;
+	padding:16px 12px 12px 12px;
+	background:#fff;
+	border-bottom:$bb;
+	@include flex;
+	dt,img{
+		width:70px;
+		height:70px;
+	}
+	dd{
+		@include flexTo(1);
+		margin-left:12px;
+	}
+	.title,.title+p{
+		font-size:15px;
+	}
+	.price{
+		color:orange;
+		padding:5px 0;
+		span{
+			margin-left:10px;
+			vertical-align:center;
+		}
+	}
+}
+.book-date{
+	width:100%;
+	height:40px;
+	padding:0 15px;
+	background:#fff;
+	border-bottom:$bb;
+	@include flex;
+	@include flexContent;
+	section{
+		@include flexTo(1);
+		line-height:40px;
+		text-align:center;
+		color:#666;
+	}
+	span{
+		margin-left:10px;
+		width:100%;
+		@include pos(relative);
+	}
+}
+.info{
+	background:#fff;
+	.tit{
+		background:#f5f6f5;
+		height:42px;
+		line-height:42px;
+		text-indent:18px;
+		color:#666;
+		font-size:15px;
+	}
+	p{
+		border-bottom:$bb;
+		line-height:45px;
+		padding:0 18px;
+		font-size:15px;
+	}
+	.room-info-right{
+		@include pos(relative);
+		padding-right:15px;
+		@include rightArrow(10px);
+		&:after{
+			margin-top: -4px;
+  			margin-left: 5px;
+		}
+	}
+}
+.write-info{
+	p{
+		@include pos(relative);
+	}
+	.left{
+		width:30%;
+	}
+	.info-text{
+		border:none;
+		background:none;
+		width:70%;
+		font-size:14px;
+	}
+	.del{
+		@include pos;
+		right:18px;
+		top:50%;
+		margin-top:-9px;
+		width:18px;
+		height:18px;
+		border-radius:50%;
+		text-align:center;
+		line-height:16px;
+		overflow:hidden;
+		background:darkgrey;
+		color:#fff;
+	}
+}
+.book-tap{
+	padding:20px 15px;
+	h4{
+		line-height:25px;
+		color:#f24c3d;
+	}
+	p{
+		font-size:12px;
+		line-height:19px;
+		color:#666;
+	}
+}
+.book-select{
+	@include pos(fixed);
+	bottom:0;
+	width:100%;
+	background:#fff;
+	z-index:99999999999;
+	transform:translate3d(0,100%,0);	
+	-webkit-transform:translate3d(0,100%,0);
+	.tit{
+		@include pos(relative);
+		line-height:40px;
+		padding:0 15px;
+		font-size:16px;
+		color:$high-color;
+	}
+	.close{
+		@include pos;
+		right:15px;
+		top:0;
+		font-size:20px;
+	}
+	p{
+		line-height:36px;
+		padding:0 15px;
+		border-top:$bb;
+		&.on{
+			background:$high-color;
+			color:#fff;
+		}
+	}
+}

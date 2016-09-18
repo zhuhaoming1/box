@@ -1,0 +1,299 @@
+@import 'public.scss';
+.container{
+	@include pos(relative);
+}
+/*------------------------------------首页部分----------------------------*/
+/*----------首页的banner部分---------*/
+.index-banner{
+	width:100%;
+	height:8.4375rem;
+	overflow:hidden;
+	position: relative;
+}
+.index-banner-wrap{
+	@extend .index-banner;
+	width:300%;
+	li{
+		float:left;
+		width:33.3%;
+		height:8.4375rem;
+		position: relative;
+		@for $i from 1 to 4{
+			&:nth-child(#{$i}){
+				background:url(../img/banner#{$i}.jpg) no-repeat;
+				background-size:100% 100%;
+			}
+		}
+	}
+}
+.index-banner-title{
+	@include pos;
+	left:20px;
+	bottom:18px;
+	z-index:10;
+	font-size:1.25em;
+	color:$nav-color;
+}
+/*----------首页的myinfo部分---------*/
+.index-myinfo{
+	background:#fff;
+	border-bottom:1px solid $border-color;
+	padding-left:15px;
+	span{
+		float:left;
+		color:$base-color;
+	}
+	a{
+		color:$text-color;
+	}
+	
+	input[type='text']{
+		border:none;
+		background:none;
+	}
+	.my{
+		width:4.375rem;
+		@include pos;
+		right:0;
+		top:0;
+		text-align: center;
+		height:4.375rem;
+		line-height: 7.5;
+		font-size: 0.785rem;
+		color:$high-color;
+		background:url(../img/icon_address2.png) no-repeat center 9px;
+		background-size:24px;
+		border-left:1px solid $border-color;
+	}
+}
+.index-myinfo-item{
+	font-size:16px;
+	@include pos(relative);
+	height:4.375rem;
+	line-height:4.375rem;
+	border-bottom:1px solid $border-color;
+	&:not(:last-child){
+		@include rightArrow($w:10px);
+	}
+	&:after{
+		@include pos;
+		right:0.9375rem;
+		top:50%;
+		margin-top:-5px;
+	}
+	&:last-child{
+		border-bottom:none;
+	}
+	&:first-child{
+		&:after{
+			right:5.3125rem;
+		}
+		.value{
+			color:$high-color;
+		}
+	}
+	&:before{
+		content:'';
+		@include pos;
+		left:0;
+		top:50%;
+		margin-top:-4px;
+		width:8px;
+		height:8px;
+		border-radius:50%;
+		background:#eee;
+	}
+}
+.index-myinfo-title{
+	width:90px;
+	padding:0 25px 0 15px;
+	font-size:0.9375rem;
+}
+.index-btn{
+	width:100%;
+	height:4.375rem;
+	background:$high-color;
+	margin-top:15px;
+	text-align:center;
+	line-height:4.375rem;
+	letter-spacing:1px;
+	span{
+		background:url(../img/icon-search.png) no-repeat left center;
+		background-size:18px;
+		color:$nav-color;
+		padding-left:23px
+	}
+}
+
+/*------------------------------------日历部分----------------------------*/
+#calendar{
+	padding-top:5.625rem;
+}
+.calendar{
+	background:$nav-color;
+	border-top:$bb;
+	span{
+		width:14.28%;
+		height:40px;
+		float:left;
+		text-align:center;
+		line-height:40px;
+		margin:0 auto;
+		border-left:$bb;
+		border-bottom:$bb;
+		color:$border-color;
+	}
+	.cur-month{
+		border-top:1px solid $high-color;
+	}
+	.cur-day{
+		color:$text-color;
+	}
+	.now{
+		background:$high-color;
+		color:$nav-color;
+	}
+	.weekday{
+		span{
+			border:none;
+			font-size:0.75rem;
+			color:$base-color;
+		}
+	}
+}
+.calendar-title{
+	@extend %title;
+	font-size:16px;
+	@include pos(relative);
+	a{
+		@include pos;
+		top:0;
+		width:3.125rem;
+		height:100%;
+		&:after{
+			margin-top:-5px;
+			top:50%;
+		}
+	}
+	.prev{
+		left:0;
+		@include leftArrow(10px);
+	}
+	.next{
+		right:0;
+		@include rightArrow(10px);
+	}
+}
+
+#city{
+	@include full;
+	@include flex(column);
+}
+.city-title{
+	span{
+		@include pos;
+		line-height:40px;
+		font-size:20px;
+		right:10px;
+		top:50%;
+		margin-top:-20px;
+	}
+	h3{
+		@extend %title;
+	}
+	.city-close{
+		font-size:20px;
+	}
+}
+.city-list{
+	@include flexTo(1);
+	height:0;
+	overflow-y:scroll;
+}
+.city-search{
+	@include pos(relative);
+	margin:10px 15px;
+	height:30px;
+	background:#fff;
+	input[type=text]{
+		@include full;
+		padding:0 20px;
+		border:none;
+		background:none;
+		outline:none;
+	}
+	button{
+		height:30px;
+		@include pos;
+		left:5px;
+		top:50%;
+		margin-top:-15px;
+		border:none;
+		background:none;
+		color:#666;
+	}
+}
+.city-current{
+	height:50px;
+	margin-top:10px;
+	background:#fff;
+	h4,span{
+		float:left;
+		line-height:50px;
+	}
+	h4{
+		font-size:16px;
+		color:$high-color;
+		padding:0 20px;
+	}
+	span{
+		color:$base-color;
+	}	
+}
+.city-item{
+	h5{
+		line-height:40px;
+		text-indent:20px;
+	}
+	ul{
+		width:100%;
+		background:#fff;
+		overflow:hidden;
+		li{
+			float:left;
+			width:25%;
+			height:35px;
+			border-right:1px solid $border-color;
+			border-bottom:1px solid $border-color;
+			text-align:center;
+			line-height:35px;
+			font-size:14px;
+			&:nth-child(4n){
+				border-right:none;
+			}
+			@include pos(relative);
+			top:1px;
+			color:#666;
+			&.on{
+				color:$high-color;
+			}
+		}
+		&:after{
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			clear:both;
+		}
+	}
+}
+.city-show{
+	opacity:1;
+	-webkit-transform:translate(0);
+	transform:translate(0);
+	-webkit-transition:all .3s ease;
+	transition:all .3s ease;
+}
+
+
+

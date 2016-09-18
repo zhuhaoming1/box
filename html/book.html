@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--声明文档使用的字符编码-->
+    <meta charset="UTF-8">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <!--设置视口的宽度=设备的宽度；初始化比例：1:1；最大，最小比例为：1:1；禁止用户缩放或放大-->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!--禁止自动识别电话号码-->
+    <meta name='format-detection' content='telephone=no'>
+    <!--禁止自动识别邮箱-->
+    <meta name='format-detection' content='email=no'>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/book.css">
+</head>
+<body> 
+    <div class="container" id='book'>
+        <header class="header">
+            <span class="back"></span>
+            <h2 class="title">订单填写</h2>
+        </header>
+        <dl>
+        	<dt><img src="../img/01.jpg" alt=""></dt>
+        	<dd>
+        		<h3 class="title">北京王府井希尔顿酒店</h3>
+        		<p>标准大床房</p>
+        		<p class="price">￥128<span class="guarantee">担保</span></p>   		
+        	</dd>
+        </dl>
+        <div class="book-date">
+        	<section>入住<span class='book-indate'></span></section>
+        	<section>离店<span class='book-outdate'></span></section>
+        </div>
+        <div class="room-info info">
+            <h3 class='tit'>房间信息</h3>
+            <p class='clear'><span class="left">房间数量</span><span class="right room-info-right count" data-idx='0'>1</span></p>
+            <p class='clear'><span class="left">到店时间</span><span class="right room-info-right time" data-idx='0'>19:00 前</span></p>
+        </div>
+        <div class="person-info info write-info">
+            <h3 class='tit'>入住人信息</h3>
+            <p class='clear'><span class="left">姓名</span><input class='info-text' type="text" placeholder="每间只需填写一个姓名"></p>
+            <p class='clear'><span class="left">证件</span><input class='info-text' type="text" placeholder="入住人省份证号/护照号"><span class="del">×</span></p>
+        </div>
+        <div class="info write-info">
+            <h3 class='tit'>联系人信息</h3>
+            <p class='clear'><span class="left">姓名</span><input class='info-text' type="text" placeholder="联系人姓名"></p>
+            <p class='clear'><span class="left">手机</span><input class='info-text' type="text" placeholder="用于接收通知短信"><span class="del">×</span></p>
+        </div>
+        <div class="book-tap">
+            <h4>温馨提示</h4>
+            <p >
+                当前房间紧张，需冻结您的信用卡金额90元用于担保订单，如订单不确定，我们将立即进行解冻。该订单确定后不可被取消或修改。若未入住或取消修改，担保费用将不被退回。
+            </p>
+        </div>
+    </div>
+    <div class='submit-footer'>
+        担保交易：￥90 <button class="submit-btn">立即预订</button>
+    </div>
+    <div class='book-select time-select'></div>
+    <div class='book-select count-select'></div>
+</body>
+</html>
+<script src='../js/zepto.min.js'></script>
+<script src='../component/iscroll5.js'></script>
+<script src='../component/calendar.js'></script>
+<script src='../component/plugins.js'></script>
+<script src='../component/dialog.js'></script>
+<script src='../js/book.js'></script>
